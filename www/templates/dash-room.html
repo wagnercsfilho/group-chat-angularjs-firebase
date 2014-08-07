@@ -1,0 +1,33 @@
+<ion-view title="Friends">
+  <ion-content class="has-header has-footer" padding="true">
+    
+<div ng-repeat="message in messages | orderBy:'created_at'">    
+<div class="from-me">
+      <p><div><b>{{message.created_by}}</b></div> {{message.content}}</p>
+    </div>
+  <div class="clear"></div>
+</div>
+ 
+
+  </ion-content>
+
+<div class="bar bar-footer bar-stable" id="bar-footer-message-box">
+    
+<div class="list">
+
+<div class="bar bar-footer bar-stable" id="bar-footer-message-box">
+    <div class="list list-inset">
+      <form ui-keypress="{13:'submitAddMessage($event)'}" data-ng-submit="submitAddMessage()" >
+        <label class="item item-input">
+          <input type="text" placeholder="your message ..." data-ng-model="newMessage">
+          <button class="button button-positive">Send</button>
+        </label>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+
+</ion-view>
